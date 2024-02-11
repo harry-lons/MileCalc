@@ -18,14 +18,10 @@
 			<div id="wrapper" class="divided">
 
 				<!-- One -->
-					<section class="banner style1 orient-left color2 content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
-						
+					<section class="banner style1 orient-left color2 content-align-left image-position-right onload-image-fade-in onload-content-fade-right" id="#">
                       <div class="content">
 							<h1>Fresh Plan</h1>
-							<p class="major">Start from scratch with a weekly goal in mind</p>
-							<ul class="actions stacked">
-								<li><a href="#first" class="button big wide smooth-scroll-middle">Get Started</a></li>
-							</ul>
+							<p class="major">Create a plan from scratch. <a href="./">click here to go home</a></p>
 						</div>
 						<div class="image">
 							<img src="images/lacing-shoes.webp" alt="" />
@@ -33,43 +29,94 @@
 					</section>
 
 				<!-- Two -->
-					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
-						<div class="content">
-							<h2>Purpose</h2>
-							<p>As a self-trained long distance runner, I'm constantly planning my own training. I don't want a computer to generate all of my workouts for me, but I spend an unnecessary amount of time each week adding up mileage of runs to find the right amount of miles per day to hit a certain weekly mileage. I figured I could automate this task by building a website that does it for me. I've created two options: <a href="#FreshPlan" class = "smooth-scroll-middle">Fresh Plan</a> and <a href="#Builder" class="smooth-scroll-middle">Builder</a>.</p>
-						</div>
-						<div class="image">
-							<img src="images/stock_runner_1.jpeg" alt="" />
-						</div>
-					</section>
+				<section class="spotlight style3 orient-right content-align-center" id="first">
+					<div class="content">
+						<h2>How it works</h2>
+						<p>Fill out the preferences below, click generate, and multiple plan options will be created for you. If you would like to enter last week's training, try <a href="./builder.html">builder.</a></p>
+					</div>
+				</section>
 
-				<!-- Three -->
-					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" id = "FreshPlan">
-						<div class="content">
-							<h2>Fresh Plan</h2>
-							<p>No previous weeks? No problem! This tool allows you to generate a reasonable weekly plan to hit the mileage you want, no strings attached.</p>
-							<ul class="actions stacked">
-								<li><a href="#" class="button">Launch Fresh Plan</a></li>
-							</ul>
-						</div>
-						<div class="image">
-							<img src="images/spotlight02.jpg" alt="" />
-						</div>
-					</section>
 
-				<!-- Four -->
-					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="Builder">
-						<div class="content">
-							<h2>Builder</h2>
-							<p>Have a schedule that works for you, but want to change your mileage? Builder allows you to enter your recent training and receive a mileage plan which caters to the schedule you already follow. </p>
-							<ul class="actions stacked">
-								<li><a href="#" class="button">Launch Builder</a></li>
-							</ul>
-						</div>
-						<div class="image">
-							<img src="images/spotlight03.jpg" alt="" />
-						</div>
-					</section>
+				<section class="wrapper style1 align-center">
+					<div class="inner">
+						<section>
+							<header>
+								<h3>Preferences</h3>
+							</header>
+							<div class="content">
+
+								<form method="post" action="#">
+									<div class="fields" style="align-items: center; justify-content: center;">
+										<div class="field third">
+											<label for="mileage">Target Mileage</label>
+											<input type="text" name="mileage" id="mileage" value="" />
+										</div>
+										<div class="field third">
+											<input type="checkbox" id="copy" name="copy" />
+											<label for="copy">Rest Day</label>
+										</div>
+										<div class="field third">
+											
+											<input type="checkbox" id="human" name="human" />
+											<label for="human">Long Run</label>
+										</div>
+									</div><input type="submit" name="submit" id="submit" value="Generate" />
+								</form>
+							</div>
+						</section>
+							<!-- Table -->
+								<section>
+										<h4>Here's a few plans to hit your weekly mileage</h4>
+										<div class="table-wrapper align-center">
+											<table class="alt">
+												<thead>
+													<tr>
+														<th class="align-center">Mon</th>
+														<th class="align-center">Tue</th>
+														<th class="align-center">Wed</th>
+														<th class="align-center">Thu</th>
+														<th class="align-center">Fri</th>
+														<th class="align-center">Sat</th>
+														<th class="align-center">Sun</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td id="mon1">1</td>
+														<td id="tue1">1</td>
+														<td id="wed1">1</td>
+														<td id="thu1">1</td>
+														<td id="fri1">1</td>
+														<td id="sat1">1</td>
+														<td id="sun1">1</td>
+													</tr>
+													<tr>
+														<td id="mon2">1</td>
+														<td id="tue2">1</td>
+														<td id="wed2">1</td>
+														<td id="thu2">1</td>
+														<td id="fri2">1</td>
+														<td id="sat2">1</td>
+														<td id="sun2">1</td>
+													</tr>
+
+													<tr>
+														<td id="mon1">1</td>
+														<td id="tue1">1</td>
+														<td id="wed1">1</td>
+														<td id="thu1">1</td>
+														<td id="fri1">1</td>
+														<td id="sat1">1</td>
+														<td id="sun1">1</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+
+									</div>
+								</section>
+
+
 
 				<!-- Footer -->
 					<footer class="wrapper style1 align-center">
