@@ -340,8 +340,5 @@
 
 						});
 
-			$('#darkMode').on('click',function(){
-				$('.banner, .spotlight, .wrapper').toggleClass('invert');
-			});
 
 })(jQuery);
