@@ -63,6 +63,7 @@ $(document).ready(function () {
         }
         // algorithm to generate plan one, which aims to be the most balanced
         function generatePlanOne(days, long, mileage) {
+            console.log("generating plan one");
             let res = new Int32Array(7);
             let weights = new Float32Array(7);
             if (days == 6) {
@@ -80,7 +81,7 @@ $(document).ready(function () {
             else {
                 if (long) {
                     weights[6] = 1 / 4;
-                    weights[1] = weights[2] = weights[3] = weights[4] = weights[5] = 1 / 8;
+                    weights[0] = weights[1] = weights[2] = weights[3] = weights[4] = weights[5] = 1 / 8;
                 }
                 else {
                     // simply set all weights to 1/7 if no long run
@@ -93,6 +94,8 @@ $(document).ready(function () {
                 miles += res[i];
             }
             let curr = 0;
+            console.log("miles = " + miles);
+            console.log("target mileage = " + mileage);
             while (miles < mileage) {
                 // The idea is to spread the remaining mileage across the days (for example, if there are 2 miles
                 // left over, don't put them both on the first day. or on the first 2 days)
@@ -100,18 +103,22 @@ $(document).ready(function () {
                     // don't add to the long run or the rest day. Do nothing in this case
                 }
                 else {
-                    res[curr]++;
+                    res[curr % 7]++;
+                    miles++;
                 }
                 // If days are odd, increment by 2. If days are even, increment by 3. Then we will cycle through
                 // But if there is a long run, reverse those because there's 1 less day we can actually add to
                 // boolean tomfoolery
                 if ((days % 2 == 0 && long) || (days % 2 == 1 && !long)) {
                     curr += 2;
+                    console.log("incrementing by 2");
                 }
                 else if ((days % 2 == 0 && !long) || (days % 2 == 1 && long)) {
                     curr += 3;
+                    console.log("incrementing by 3");
                 }
-                miles++;
+                console.log("miles = " + miles);
+                console.log("target mileage = " + mileage);
             }
             $("#mon1").text(res[0]);
             $("#tue1").text(res[1]);
@@ -121,11 +128,11 @@ $(document).ready(function () {
             $("#sat1").text(res[5]);
             $("#sun1").text(res[6]);
         }
-        function generatePlanTwo(days, long, mileage) {
-            let res = new Int32Array(7);
+        function generatePlanTwo(_days, _long, _mileage) {
+            return;
         }
-        function generatePlanThree(days, long, mileage) {
-            let res = new Int32Array(7);
+        function generatePlanThree(_days, _long, _mileage) {
+            return;
         }
     });
 });
