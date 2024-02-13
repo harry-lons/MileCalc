@@ -27,7 +27,6 @@
 							<img src="images/lacing-shoes.webp" alt="" />
 						</div>
 					</section>
-
 				<!-- Two -->
 				<section class="spotlight style3 orient-right content-align-center" id="first">
 					<div class="content">
@@ -35,7 +34,6 @@
 						<p>Fill out the preferences below, click generate, and multiple plan options will be created for you. If you would like to enter last week's training, try <a href="./builder.html">builder.</a></p>
 					</div>
 				</section>
-
 
 				<section class="wrapper style1 align-center">
 					<div class="inner">
@@ -45,28 +43,30 @@
 							</header>
 							<div class="content">
 
-								<form id="generateForm" method="post" action="#">
+								<form id="generateForm" method="post" >
 									<div class="fields" style="align-items: center; justify-content: center;">
 										<div class="field third">
 											<label for="mileage">Target Mileage</label>
 											<input type="text" name="mileage" id="mileage" value="" />
 										</div>
 										<div class="field third">
-											<input type="checkbox" id="copy" name="copy" />
-											<label for="copy">Rest Day</label>
+											<input type="checkbox" id="rest" name="rest" />
+											<label for="rest">Rest Day</label>
 										</div>
 										<div class="field third">
-											
-											<input type="checkbox" id="human" name="human" />
-											<label for="human">Long Run</label>
+											<input type="checkbox" id="long" name="long" />
+											<label for="long">Long Run</label>
 										</div>
-									</div><input type="submit" name="generate" id="generate" value="Generate!" />
+										<ul class="actions">
+											<li><input type="submit" name="generate" id="generate" value="Generate!" /></li>
+										</ul>
 								</form>
 							</div>
 						</section>
+
 							<!-- Table -->
 								<section>
-										<h4>Here's a few plans to hit your weekly mileage</h4>
+										<h3 id="returnMessage"></h3>
 										<div class="table-wrapper align-center">
 											<table class="alt">
 												<thead>
@@ -82,32 +82,32 @@
 												</thead>
 												<tbody>
 													<tr>
-														<td id="mon1">1</td>
-														<td id="tue1">1</td>
-														<td id="wed1">1</td>
-														<td id="thu1">1</td>
-														<td id="fri1">1</td>
-														<td id="sat1">1</td>
-														<td id="sun1">1</td>
+														<td id="mon1"></td>
+														<td id="tue1"></td>
+														<td id="wed1"></td>
+														<td id="thu1"></td>
+														<td id="fri1"></td>
+														<td id="sat1"></td>
+														<td id="sun1"></td>
 													</tr>
 													<tr>
-														<td id="mon2">1</td>
-														<td id="tue2">1</td>
-														<td id="wed2">1</td>
-														<td id="thu2">1</td>
-														<td id="fri2">1</td>
-														<td id="sat2">1</td>
-														<td id="sun2">1</td>
+														<td id="mon2"></td>
+														<td id="tue2"></td>
+														<td id="wed2"></td>
+														<td id="thu2"></td>
+														<td id="fri2"></td>
+														<td id="sat2"></td>
+														<td id="sun2"></td>
 													</tr>
 
 													<tr>
-														<td id="mon1">1</td>
-														<td id="tue1">1</td>
-														<td id="wed1">1</td>
-														<td id="thu1">1</td>
-														<td id="fri1">1</td>
-														<td id="sat1">1</td>
-														<td id="sun1">1</td>
+														<td id="mon3"></td>
+														<td id="tue3"></td>
+														<td id="wed3"></td>
+														<td id="thu3"></td>
+														<td id="fri3"></td>
+														<td id="sat3"></td>
+														<td id="sun3"></td>
 													</tr>
 												</tbody>
 											</table>
@@ -128,7 +128,7 @@
 								<li><a href="https://www.instagram.com/harry.lons/" target="_blank" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
 								<li><a href="https://www.linkedin.com/in/harry-lonsdale-386156253/" target="_blank" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
 							</ul>
-							<p>Quick Links: <a href="./">Home</a> / <a href="./fp">FP</a> / <a href="./builder">builder</a></p>
+							<p>Quick Links: <a href="./">Home</a> / <a href="./fp.html">FP</a> / <a href="./builder.html">builder</a></p>
 							<p>Design template: <a href="https://html5up.net" target="_blank">HTML5 UP</a>.</p>
 						</div>
 					</footer>
@@ -143,6 +143,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/tsOutput/harry.js"></script>
 
 	</body>
 </html>
