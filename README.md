@@ -1,3 +1,3 @@
 # MileCalc
 
-My personal running web development project 
+My first personal running web development project
