@@ -57,7 +57,7 @@ const Home = () => {
 
       {/* Fresh Plan Section */}
       <section
-        className="spotlight style4 orient-left content-align-left image-position-center onscroll-image-fade-in"
+        className="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in"
         id="FreshPlan"
       >
         <div className="content">
@@ -81,7 +81,7 @@ const Home = () => {
 
       {/* Builder Section */}
       <section
-        className="spotlight style4 orient-right content-align-left image-position-center onscroll-image-fade-in"
+        className="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in"
         id="Builder"
       >
         <div className="content">
