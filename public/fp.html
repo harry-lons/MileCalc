@@ -1,149 +1,154 @@
 <!DOCTYPE HTML>
 <!--
-	Story by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+    Story by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>MileCalc</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="/assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<head>
+    <title>MileCalc</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="MileCalc: Create custom plans for your workouts and more!" />
+    <meta name="author" content="Harry Lonsdale" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <noscript>
+        <link rel="stylesheet" href="/assets/css/noscript.css" />
+    </noscript>
+</head>
+<body class="is-preload">
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="divided">
+<!-- Wrapper -->
+<div id="wrapper" class="divided">
 
-				<!-- One -->
-					<section class="banner style1 orient-left color2 content-align-left image-position-right onload-image-fade-in onload-content-fade-right" id="#">
-                      <div class="content">
-							<h1>Fresh Plan</h1>
-							<p class="major">Create a plan from scratch. <a href="./">click here to go home</a></p>
-						</div>
-						<div class="image">
-							<img src="images/lacing-shoes.webp" alt="" />
-						</div>
-					</section>
-				<!-- Two -->
-				<section class="spotlight style3 orient-right content-align-center" id="first">
-					<div class="content">
-						<h2>How it works</h2>
-						<p>Fill out the preferences below, click generate, and multiple plan options will be created for you. If you would like to enter last week's training, try <a href="/builder.html">builder.</a></p>
-					</div>
-				</section>
+    <!-- One -->
+    <section class="banner style1 orient-left color2 content-align-left image-position-right onload-image-fade-in onload-content-fade-right" id="#">
+        <div class="content">
+            <h1>Fresh Plan</h1>
+            <p class="major">Create a plan from scratch. <a href="/">Click here to go home</a></p>
+        </div>
+        <div class="image">
+            <img src="/images/lacing-shoes.webp" alt="Lacing shoes" />
+        </div>
+    </section>
 
-				<section class="wrapper style1 align-center">
-					<div class="inner">
-						<section>
-							<header>
-								<h3>Preferences</h3>
-							</header>
-							<div class="content">
+    <!-- Two -->
+    <section class="spotlight style3 orient-right content-align-center" id="first">
+        <div class="content">
+            <h2>How it works</h2>
+            <p>Fill out the preferences below, click generate, and multiple plan options will be created for you. If you would like to enter last week's training, try <a href="/builder.html">Builder</a>.</p>
+        </div>
+    </section>
 
-								<form id="generateForm" method="post" >
-									<div class="fields" style="align-items: center; justify-content: center;">
-										<div class="field third">
-											<label for="mileage">Target Mileage</label>
-											<input type="text" name="mileage" id="mileage" value="" />
-										</div>
-										<div class="field third">
-											<input type="checkbox" id="rest" name="rest" />
-											<label for="rest">Rest Day</label>
-										</div>
-										<div class="field third">
-											<input type="checkbox" id="long" name="long" />
-											<label for="long">Long Run</label>
-										</div>
-										<ul class="actions">
-											<li><input type="submit" name="generate" id="generate" value="Generate!" /></li>
-										</ul>
-								</form>
-							</div>
-						</section>
+    <section class="wrapper style1 align-center">
+        <div class="inner">
+            <section>
+                <header>
+                    <h3>Preferences</h3>
+                </header>
+                <div class="content">
 
-							<!-- Table -->
-								<section>
-										<h3 id="returnMessage"></h3>
-										<div class="table-wrapper align-center">
-											<table class="alt">
-												<thead>
-													<tr>
-														<th class="align-center">Mon</th>
-														<th class="align-center">Tue</th>
-														<th class="align-center">Wed</th>
-														<th class="align-center">Thu</th>
-														<th class="align-center">Fri</th>
-														<th class="align-center">Sat</th>
-														<th class="align-center">Sun</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td id="mon1"></td>
-														<td id="tue1"></td>
-														<td id="wed1"></td>
-														<td id="thu1"></td>
-														<td id="fri1"></td>
-														<td id="sat1"></td>
-														<td id="sun1"></td>
-													</tr>
-													<tr>
-														<td id="mon2"></td>
-														<td id="tue2"></td>
-														<td id="wed2"></td>
-														<td id="thu2"></td>
-														<td id="fri2"></td>
-														<td id="sat2"></td>
-														<td id="sun2"></td>
-													</tr>
+                    <form id="generateForm" method="post">
+                        <div class="fields" style="align-items: center; justify-content: center;">
+                            <div class="field third">
+                                <label for="mileage">Target Mileage</label>
+                                <input type="text" name="mileage" id="mileage" value="" />
+                            </div>
+                            <div class="field third">
+                                <input type="checkbox" id="rest" name="rest" />
+                                <label for="rest">Rest Day</label>
+                            </div>
+                            <div class="field third">
+                                <input type="checkbox" id="long" name="long" />
+                                <label for="long">Long Run</label>
+                            </div>
+                            <ul class="actions">
+                                <li><input type="submit" name="generate" id="generate" value="Generate!" /></li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+            </section>
 
-													<tr>
-														<td id="mon3"></td>
-														<td id="tue3"></td>
-														<td id="wed3"></td>
-														<td id="thu3"></td>
-														<td id="fri3"></td>
-														<td id="sat3"></td>
-														<td id="sun3"></td>
-													</tr>
-												</tbody>
-											</table>
-										</div>
-										<h5>(The third plan is often quite strange. It's randomly generated)</h5>
-									</div>
-								</section>
+            <!-- Table -->
+            <section>
+                <h3 id="returnMessage"></h3>
+                <div class="table-wrapper align-center">
+                    <table class="alt">
+                        <thead>
+                        <tr>
+                            <th class="align-center">Mon</th>
+                            <th class="align-center">Tue</th>
+                            <th class="align-center">Wed</th>
+                            <th class="align-center">Thu</th>
+                            <th class="align-center">Fri</th>
+                            <th class="align-center">Sat</th>
+                            <th class="align-center">Sun</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td id="mon1"></td>
+                            <td id="tue1"></td>
+                            <td id="wed1"></td>
+                            <td id="thu1"></td>
+                            <td id="fri1"></td>
+                            <td id="sat1"></td>
+                            <td id="sun1"></td>
+                        </tr>
+                        <tr>
+                            <td id="mon2"></td>
+                            <td id="tue2"></td>
+                            <td id="wed2"></td>
+                            <td id="thu2"></td>
+                            <td id="fri2"></td>
+                            <td id="sat2"></td>
+                            <td id="sun2"></td>
+                        </tr>
+                        <tr>
+                            <td id="mon3"></td>
+                            <td id="tue3"></td>
+                            <td id="wed3"></td>
+                            <td id="thu3"></td>
+                            <td id="fri3"></td>
+                            <td id="sat3"></td>
+                            <td id="sun3"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h5>(The third plan is often quite strange. It's randomly generated)</h5>
+            </section>
 
+        </div>
+    </section>
 
+    <!-- Footer -->
+    <footer class="wrapper style1 align-center">
+        <div class="inner">
+            <h2>Contact</h2>
+            <p>Have suggestions for this site? Contact me on one of my socials below!</p>
+            <ul class="icons">
+                <li><a href="https://twitter.com/tsunodium" target="_blank" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="https://www.instagram.com/harry.lons/" target="_blank" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="https://www.linkedin.com/in/harry-lonsdale-386156253/" target="_blank" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+            </ul>
+            <p>Quick Links: <a href="/">Home</a> / <a href="/fp.html">FP</a> / <a href="/builder.html">Builder</a></p>
+            <p>Design template: <a href="https://html5up.net" target="_blank">HTML5 UP</a>.</p>
+        </div>
+    </footer>
 
-				<!-- Footer -->
-					<footer class="wrapper style1 align-center">
-						<div class="inner">
-              <h2>Contact</h2>
-              <p>Have suggestions for this site? Contact me on one of my socials below!</p>
-							<ul class="icons">
-								<li><a href="https://twitter.com/tsunodium" target="_blank" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="https://www.instagram.com/harry.lons/" target="_blank" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="https://www.linkedin.com/in/harry-lonsdale-386156253/" target="_blank" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-							</ul>
-							<p>Quick Links: <a href="./">Home</a> / <a href="/fp.html">FP</a> / <a href="/builder.html">builder</a></p>
-							<p>Design template: <a href="https://html5up.net" target="_blank">HTML5 UP</a>.</p>
-						</div>
-					</footer>
+</div>
 
-			</div>
+<!-- Scripts -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/jquery.scrollex.min.js"></script>
+<script src="/assets/js/jquery.scrolly.min.js"></script>
+<script src="/assets/js/browser.min.js"></script>
+<script src="/assets/js/breakpoints.min.js"></script>
+<script src="/assets/js/util.js"></script>
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/tsOutput/harry.js"></script>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script src="assets/js/tsOutput/harry.js"></script>
-
-	</body>
+</body>
 </html>
