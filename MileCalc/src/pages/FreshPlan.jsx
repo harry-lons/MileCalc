@@ -291,7 +291,7 @@ const FP = () => {
           <p>Have suggestions for this site? Contact me on one of my socials below!</p>
           <ul className="icons">
             <li>
-              <a href="https://twitter.com/tsunodium" target="_blank" rel="noopener noreferrer" className="icon brands style2 fa-twitter">
+              <a href="https://x.com/HarryLonsd52585" target="_blank" rel="noopener noreferrer" className="icon brands style2 fa-twitter">
                 <span className="label">Twitter</span>
               </a>
             </li>

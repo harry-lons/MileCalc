@@ -111,7 +111,7 @@ const Home = () => {
           <ul className="icons">
             <li>
               <a
-                href="https://twitter.com/tsunodium"
+                href="https://x.com/HarryLonsd52585"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="icon brands style2 fa-twitter"
