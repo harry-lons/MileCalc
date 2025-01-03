@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const FP = () => {
   const [mileage, setMileage] = useState('');
@@ -10,6 +10,11 @@ const FP = () => {
     Array(7).fill(0),
     Array(7).fill(0)
   ]);
+  const [darkMode, setDarkMode] = useState(false);
+    useEffect(() => {
+        const savedDarkMode = localStorage.getItem('darkMode') === 'true';
+        setDarkMode(savedDarkMode); // Set initial state based on stored value
+      }, []); 
 
   // Helper function to normalize weights
   const normalize = (weights) => {
@@ -186,7 +191,7 @@ const FP = () => {
   return (
     <div id="wrapper" className="divided">
       {/* Banner Section */}
-      <section className="banner style1 orient-left color2 content-align-left image-position-right onload-image-fade-in onload-content-fade-right" id="#">
+      <section className={`banner style1 orient-left color2 content-align-left image-position-right onload-image-fade-in onload-content-fade-right ${darkMode ? 'invert' : ''}`} id="#">
         <div className="content">
           <h1>Fresh Plan</h1>
           <p className="major">Create a plan from scratch. <a href="/">Click here to go home</a></p>
@@ -197,7 +202,7 @@ const FP = () => {
       </section>
 
       {/* How it Works Section */}
-      <section className="spotlight style3 orient-right content-align-center" id="first">
+      <section className={`spotlight style3 orient-right content-align-center ${darkMode ? 'invert' : ''}`} id="first">
         <div className="content">
           <h2>How it works</h2>
           <p>Fill out the preferences below, click generate, and multiple plan options will be created for you. If you would like to enter last week's training, try <a href="/builder">Builder</a>.</p>
@@ -205,7 +210,7 @@ const FP = () => {
       </section>
 
       {/* Preferences Form Section */}
-      <section className="wrapper style1 align-center">
+      <section className={`wrapper style1 align-center ${darkMode ? 'invert' : ''}`}>
         <div className="inner">
           <section>
             <header>
@@ -253,7 +258,7 @@ const FP = () => {
           </section>
 
           {/* Generated Plans Table */}
-          <section>
+          <section className={`${darkMode ? 'invert' : ''}`}>
             <h3>{returnMessage}</h3>
             <div className="table-wrapper align-center">
               <table className="alt">
@@ -285,7 +290,7 @@ const FP = () => {
       </section>
 
       {/* Footer */}
-      <footer className="wrapper style1 align-center">
+      <footer className={`wrapper style1 align-center ${darkMode ? 'invert' : ''}`}>
         <div className="inner">
           <h2>Contact</h2>
           <p>Have suggestions for this site? Contact me on one of my socials below!</p>
